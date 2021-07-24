@@ -16,14 +16,6 @@ client.on('ready', () => {
 // Bot online
 client.login(process.env.TOKEN);
 
-// set presence
-client.user.setPresence({
-    status: "online",
-    game: {
-      name: "for %commands",
-      type: "WATCHING"
-    }
-  });
 
 // ********** JOKE COMMAND **********
 
