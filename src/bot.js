@@ -74,7 +74,7 @@ command(client, 'help', message => {
     By the way, this guy <@581675710515511306> invented me eventhough he's emotionally unstable.`)
     .addField(
         "Critical info:",
-        `Feel free to try my commands by typing \`!commands\``,
+        `Feel free to try my commands by typing \`%commands\``,
         true
     )
     .setColor('20f937')
@@ -104,13 +104,13 @@ command(client, 'quotes', message => {
 command(client, 'commands', message => {
     const embed = new Discord.MessageEmbed()
     .setTitle(`Commands inside me, the legendary ${client.user.username}`)
-    .setDescription(`You guys can access me by start typing after a \`!\` prefix.`)
+    .setDescription(`You guys can access me by start typing after a \`%\` prefix.`)
     .addField(
         "command info:",
         `<@${message.author.id}> These are my available commands
-        \`!anime\` - I will send you a kick-ass anime quote
-        \`!joke\` - A cheesy joke for you from me
-        \`!quotes\` - Motivational quote to make your day better\n
+        \`%anime\` - I will send you a kick-ass anime quote
+        \`%joke\` - A cheesy joke for you from me
+        \`%quotes\` - Motivational quote to make your day better\n
         These are my commands for now, if you want to provide my developer a feedback, feel free to send a message to this guy, <@${process.env.MYID}>, He's lying btw lol, He indeed is a SIMP and he's not proud of it.`,
         true
     )
