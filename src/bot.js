@@ -16,6 +16,12 @@ client.on('ready', () => {
 // Bot online
 client.login(process.env.TOKEN);
 
+// setting up rich presence for the bot
+client.user.setPresence({
+    activity: { name: "out for $commands", type: "WATCHING" },
+    status: "online",
+});
+
 // ********** JOKE COMMAND **********
 
 command(client, 'joke', message => {
@@ -30,12 +36,6 @@ command(client, 'joke', message => {
         message.channel.send(embed);
     }
     getjoke(message);
-});
-
-// setting up rich presence for the bot
-client.user.setPresence({
-    activity: { name: "out for $commands", type: "WATCHING" },
-    status: "online",
 });
 
 // ********** ANIME COMMAND **********   
