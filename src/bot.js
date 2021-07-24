@@ -32,6 +32,12 @@ command(client, 'joke', message => {
     getjoke(message);
 });
 
+// setting up rich presence for the bot
+client.user.setPresence({
+    activity: { name: "out for $commands", type: "WATCHING" },
+    status: "online",
+});
+
 // ********** ANIME COMMAND **********   
 
 command(client, 'anime', message => {
