@@ -11,11 +11,10 @@ const Request = require('request');
 // logging in the bot
 client.on('ready', () => {
     console.log('Bot online...')
-    client.login(process.env.TOKEN)
 });
 
 // Bot online
-
+client.login(process.env.TOKEN);
 
 // ********** JOKE COMMAND **********
 
@@ -32,6 +31,7 @@ command(client, 'joke', message => {
     }
     getjoke(message);
 });
+
 
 // ********** ANIME COMMAND **********   
 
