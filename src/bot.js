@@ -36,7 +36,10 @@ command(client, 'joke', message => {
 // ********** ANIME COMMAND **********   
 
 command(client, 'anime', message => {
-    let animeQuote = async () => {
+    fetch('https://animechan.vercel.app/api/random')
+        .then(response => response.json())
+        .then(quote => console.log(quote))
+    /**let animeQuote = async () => {
         let response = await axios.get('https://animechan.vercel.app/api/random');
         let animeQuote = response.data;
         let results = animeQuote.data.character;
@@ -49,7 +52,7 @@ command(client, 'anime', message => {
         //.setThumbnail('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1bb2df56-4c6f-418e-bd9f-ab3864f0fd63/dajd932-6930d790-8f1c-4aa3-9484-22b77bcd13d9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMWJiMmRmNTYtNGM2Zi00MThlLWJkOWYtYWIzODY0ZjBmZDYzXC9kYWpkOTMyLTY5MzBkNzkwLThmMWMtNGFhMy05NDg0LTIyYjc3YmNkMTNkOS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.zn7imjOALAyabcOeB8hKmy52TaNpsjPyE0uF7db1iHU')
         message.channel.send(embed);
         //message.reply(`"${animeQuote.data[0].quote}" - ${animeQuote.data[0].character}`);
-    }
+    }**/
     animeQuote(message);
 });
 
