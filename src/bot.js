@@ -16,11 +16,6 @@ client.on('ready', () => {
 
 // Bot online
 
-// setting up rich presence for the bot
-client.user.setPresence({
-    activity: { name: "out for $commands", type: "WATCHING" },
-    status: "online",
-});
 
 // ********** JOKE COMMAND **********
 
