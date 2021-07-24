@@ -43,7 +43,7 @@ command(client, 'anime', message => {
         const embed = new Discord.MessageEmbed()
         .addField(`Here's a bad-ass anime quote for you `,
         `<@${message.author.id}>`)
-        .setDescription(`"${animeQuote.quote}" - **${animeQuote.character}**`)
+        .setDescription(`"${animeQuote.quote}" - **${animeQuote.character}** from ${animeQuote.anime}`)
         .setColor('f4e9ea')
         .setThumbnail(image(message, results))
         //.setThumbnail('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1bb2df56-4c6f-418e-bd9f-ab3864f0fd63/dajd932-6930d790-8f1c-4aa3-9484-22b77bcd13d9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMWJiMmRmNTYtNGM2Zi00MThlLWJkOWYtYWIzODY0ZjBmZDYzXC9kYWpkOTMyLTY5MzBkNzkwLThmMWMtNGFhMy05NDg0LTIyYjc3YmNkMTNkOS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.zn7imjOALAyabcOeB8hKmy52TaNpsjPyE0uF7db1iHU')
