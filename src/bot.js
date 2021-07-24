@@ -16,7 +16,6 @@ client.on('ready', () => {
 // Bot online
 client.login(process.env.TOKEN);
 
-
 // ********** JOKE COMMAND **********
 
 command(client, 'joke', message => {
