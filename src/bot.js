@@ -14,13 +14,13 @@ client.on('ready', () => {
 });
 
 // Bot online
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN).then(client.user.setPresence({
+    activity: { name: "out for !commands", type: "WATCHING" },
+    status: "online",
+}));;
 
 // setting up rich presence for the bot
-client.user.setPresence({
-    activity: { name: "out for $commands", type: "WATCHING" },
-    status: "online",
-});
+
 
 // ********** JOKE COMMAND **********
 
